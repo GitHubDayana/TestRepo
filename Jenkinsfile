@@ -14,7 +14,6 @@ pipeline {
                 sh '''
                 cd TestApp
                 pwd
-                dotnet build
                 dotnet publish -c Release -o ./var/www/Application
                 '''
             }
