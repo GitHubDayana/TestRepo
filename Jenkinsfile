@@ -8,12 +8,14 @@ pipeline {
                 git url: 'https://github.com/GitHubDayana/TestRepo.git', branch: 'main'
             }
         }
-           stage('Restore Dependencies') {
+           stage('Publish') {
             steps {
                 // Restore dependencies
                 sh '''
                 cd TestApp
                 pwd
+                dotnet build
+                dotnet publish -c Release -o ./var/www/Application
                 '''
             }
         }
