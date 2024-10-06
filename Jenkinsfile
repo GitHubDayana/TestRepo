@@ -11,28 +11,7 @@ pipeline {
            stage('Restore Dependencies') {
             steps {
                 // Restore dependencies
-                sh 'dotnet restore'
-            }
-        }
-
-        stage('Build') {
-            steps {
-                // Build the application
-                sh 'dotnet build'
-            }
-        }
-
-        stage('Test') {
-            steps {
-                // Run unit tests
-                sh 'dotnet test'
-            }
-        }
-
-        stage('Publish') {
-            steps {
-                // Publish the application
-                sh 'dotnet publish -c Release -o ./var/www/Application'
+                sh 'pwd'
             }
         }
     }
