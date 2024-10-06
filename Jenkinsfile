@@ -12,6 +12,8 @@ pipeline {
             steps {
                 // Restore dependencies
                 sh 'pwd'
+                sh 'cd TestApp'
+                sh 'pwd'
             }
         }
     }
